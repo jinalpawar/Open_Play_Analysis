@@ -50,16 +50,16 @@ class InteractivePresentation:
 
     def __init__(self):
         self.datasets = {
-            "meta" : pd.read_csv('https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/game_metadata.csv.gz'),
-            "intake" : pd.read_csv("https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/survey_intake.csv.gz"),
-            "daily" : pd.read_csv("https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/survey_daily.csv.gz"),
-            "biweekly" : pd.read_csv("https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/survey_biweekly.csv.gz"),
-            "xbox" : pd.read_csv('https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/xbox.csv.gz'),
-            "steam" : pd.read_csv("https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/steam.csv.gz"),
-            "nintendo" : pd.read_csv("https://github.com/digital-wellbeing/open-play/raw/refs/heads/main/data/clean/nintendo.csv.gz")
+            "meta" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/game_metadata.csv"),
+            "intake" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/survey_intake.csv"),
+            "daily" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/survey_daily.csv"),
+            "biweekly" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/survey_biweekly.csv"),
+            "xbox" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/xbox.csv"),
+            "steam" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/steam.csv"),
+            "nintendo" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/nintendo.csv")
         }
         self.current_slide = 0  # Track which slide is currently displayed
-        self.total_slides = 7  # Total number of slides in presentation
+        self.total_slides = 5  # Total number of slides in presentation
         self.slides = []  # Will hold Bokeh layout objects for each slide
         self.auto_play = False  # Flag for auto-advance mode
         self.auto_play_callback = (None)
@@ -109,7 +109,7 @@ class InteractivePresentation:
         titles = [
             "The Dataset",
             "Who plays when?",
-            "",
+            # "Patterns in Gender-wise Game Preference",
             "Does gaming make us unhappy?"
             "When play time spikes (why?), does it affect the wellbeing?",
             "Conclusion"
@@ -132,15 +132,15 @@ class InteractivePresentation:
     def create_slides(self):
         """Create all presentation slides"""
         self.slides = [
-            self.create_slide_1_introduction(),
-            self.create_slide_2_demographics(),
-            self.create_slide_3_losing_control(),
-            self.create_slide_4_playtime_vs_wellbeing(),
-            self.create_slide_5_playtime_spikes(),
-            self.create_slide_6_conclusions()
+            self.create_slide_1(),
+            self.create_slide_2(),
+            # self.create_slide_3(),
+            self.create_slide_4(),
+            # self.create_slide_5(),
+            self.create_slide_6()
         ]
 
-    def create_slide_1_introduction(self):
+    def create_slide_1(self):
         """Slide 1: Welcome and Introduction"""
 
         title = Div(
@@ -180,7 +180,7 @@ class InteractivePresentation:
             ]
         )
 
-    def create_slide_2_demographics(self):
+    def create_slide_2(self):
         """Slide 2:Demographic Exploration"""
 
         title = Div(
@@ -202,13 +202,13 @@ class InteractivePresentation:
                     ]
                 )
 
-    def create_slide_3_losing_control(self):
-        """Slide 3: Losing control"""
+    def create_slide_3(self):
+        """Slide 3: Gender-wise Preferences"""
 
         title = Div(
             text="""
         <h1 style="text-align: center; color: #2c3e50;">
-            When a player's mental wellbeing is not great, do they feel like you lost control over playtime?
+            Are there any patterns in gender-wise preferences of popular game themes?
         </h1>
 
         """,
@@ -234,7 +234,7 @@ class InteractivePresentation:
                     ]
                 )
 
-    def create_slide_4_playtime_vs_wellbeing(self):
+    def create_slide_4(self):
         """Slide 4: Wellbeing Index v/s Playtime"""
 
         title = Div(
@@ -270,7 +270,7 @@ class InteractivePresentation:
                     ]
                 )
 
-    def create_slide_5_playtime_spikes(self):
+    def create_slide_5(self):
         """Slide 5: Wellbeing Index v/s Playtime Spikes"""
 
         title = Div(
@@ -338,7 +338,7 @@ class InteractivePresentation:
                     ]
                 )
 
-    def create_slide_6_conclusions(self):
+    def create_slide_6(self):
         """Slide 6: Conclusion"""
 
         title = Div(
