@@ -1,0 +1,793 @@
+panel,group,n,hour,mode,value
+platform,steam,2805,0,All,4.2628381764458485
+platform,steam,2805,0,Weekday,3.951611234641677
+platform,steam,2805,0,Weekend,5.040905530956278
+platform,steam,2805,1,All,3.045389338020504
+platform,steam,2805,1,Weekday,2.84949179225782
+platform,steam,2805,1,Weekend,3.5351332024272146
+platform,steam,2805,2,All,2.2031092597658115
+platform,steam,2805,2,Weekday,2.0615931901561906
+platform,steam,2805,2,Weekend,2.5568994337898645
+platform,steam,2805,3,All,1.557645940406286
+platform,steam,2805,3,Weekday,1.4630062780438315
+platform,steam,2805,3,Weekend,1.7942450963124206
+platform,steam,2805,4,All,1.1396341231744307
+platform,steam,2805,4,Weekday,1.082316573558961
+platform,steam,2805,4,Weekend,1.282927997213105
+platform,steam,2805,5,All,0.9261856876441956
+platform,steam,2805,5,Weekday,0.8708564455100505
+platform,steam,2805,5,Weekend,1.064508792979558
+platform,steam,2805,6,All,0.9263125291963215
+platform,steam,2805,6,Weekday,0.870451335601012
+platform,steam,2805,6,Weekend,1.0659655131845958
+platform,steam,2805,7,All,1.0859980819654353
+platform,steam,2805,7,Weekday,1.0265790749992145
+platform,steam,2805,7,Weekend,1.2345455993809877
+platform,steam,2805,8,All,1.4410963099653147
+platform,steam,2805,8,Weekday,1.3423665822751105
+platform,steam,2805,8,Weekend,1.6879206291908257
+platform,steam,2805,9,All,1.9005190961347702
+platform,steam,2805,9,Weekday,1.753019307576201
+platform,steam,2805,9,Weekend,2.269268567531193
+platform,steam,2805,10,All,2.410818618418766
+platform,steam,2805,10,Weekday,2.1777627218895934
+platform,steam,2805,10,Weekend,2.993458359741696
+platform,steam,2805,11,All,2.8980491123948235
+platform,steam,2805,11,Weekday,2.628186950859099
+platform,steam,2805,11,Weekend,3.5727045162341353
+platform,steam,2805,12,All,3.4320665821335017
+platform,steam,2805,12,Weekday,3.0629392507878506
+platform,steam,2805,12,Weekend,4.354884910497629
+platform,steam,2805,13,All,4.006167929115743
+platform,steam,2805,13,Weekday,3.585562700839544
+platform,steam,2805,13,Weekend,5.057680999806242
+platform,steam,2805,14,All,4.514360056544202
+platform,steam,2805,14,Weekday,4.055476486965384
+platform,steam,2805,14,Weekend,5.661568980491248
+platform,steam,2805,15,All,4.971000573513258
+platform,steam,2805,15,Weekday,4.520478426716796
+platform,steam,2805,15,Weekend,6.097305940504415
+platform,steam,2805,16,All,5.248452823640582
+platform,steam,2805,16,Weekday,4.824322426567884
+platform,steam,2805,16,Weekend,6.308778816322328
+platform,steam,2805,17,All,5.660857472105271
+platform,steam,2805,17,Weekday,5.342903996111232
+platform,steam,2805,17,Weekend,6.455741162090368
+platform,steam,2805,18,All,6.368647145700453
+platform,steam,2805,18,Weekday,6.11489387009288
+platform,steam,2805,18,Weekend,7.003030334719384
+platform,steam,2805,19,All,7.272008903670759
+platform,steam,2805,19,Weekday,7.112388688435711
+platform,steam,2805,19,Weekend,7.67105944175838
+platform,steam,2805,20,All,7.975822657900096
+platform,steam,2805,20,Weekday,7.831611196233792
+platform,steam,2805,20,Weekend,8.33635131206586
+platform,steam,2805,21,All,7.82706620494336
+platform,steam,2805,21,Weekday,7.7017777862102745
+platform,steam,2805,21,Weekend,8.140287251776073
+platform,steam,2805,22,All,6.968328265571909
+platform,steam,2805,22,Weekday,6.811845034539309
+platform,steam,2805,22,Weekend,7.359536343153406
+platform,steam,2805,23,All,5.722550404437429
+platform,steam,2805,23,Weekday,5.545386602389736
+platform,steam,2805,23,Weekend,6.165459909556663
+platform,xbox,305,0,All,5.475543680017996
+platform,xbox,305,0,Weekday,5.189547477793632
+platform,xbox,305,0,Weekend,6.190534185578903
+platform,xbox,305,1,All,4.210539729877664
+platform,xbox,305,1,Weekday,3.983655237836175
+platform,xbox,305,1,Weekend,4.777750959981385
+platform,xbox,305,2,All,3.168597939217119
+platform,xbox,305,2,Weekday,3.033665964761647
+platform,xbox,305,2,Weekend,3.505927875355797
+platform,xbox,305,3,All,2.3163398591773285
+platform,xbox,305,3,Weekday,2.2157299531050296
+platform,xbox,305,3,Weekend,2.567864624358075
+platform,xbox,305,4,All,1.5824612736571553
+platform,xbox,305,4,Weekday,1.503166115998698
+platform,xbox,305,4,Weekend,1.7806991678032986
+platform,xbox,305,5,All,1.2731077448701769
+platform,xbox,305,5,Weekday,1.2378380131074347
+platform,xbox,305,5,Weekend,1.361282074277032
+platform,xbox,305,6,All,1.306725092977622
+platform,xbox,305,6,Weekday,1.2429178497895155
+platform,xbox,305,6,Weekend,1.466243200947888
+platform,xbox,305,7,All,1.5936106552770615
+platform,xbox,305,7,Weekday,1.5385688517387583
+platform,xbox,305,7,Weekend,1.731215164122819
+platform,xbox,305,8,All,2.0664356369146994
+platform,xbox,305,8,Weekday,1.8969800794371015
+platform,xbox,305,8,Weekend,2.4900745306086933
+platform,xbox,305,9,All,2.8724318184449835
+platform,xbox,305,9,Weekday,2.566763216458842
+platform,xbox,305,9,Weekend,3.6366033234103377
+platform,xbox,305,10,All,3.7215398673433393
+platform,xbox,305,10,Weekday,3.320577672124618
+platform,xbox,305,10,Weekend,4.723945355390143
+platform,xbox,305,11,All,4.455794414367697
+platform,xbox,305,11,Weekday,4.001438463840833
+platform,xbox,305,11,Weekend,5.5916842906848565
+platform,xbox,305,12,All,5.119474552542389
+platform,xbox,305,12,Weekday,4.592894698947316
+platform,xbox,305,12,Weekend,6.435924186530069
+platform,xbox,305,13,All,5.582679097643506
+platform,xbox,305,13,Weekday,5.196126377771141
+platform,xbox,305,13,Weekend,6.549060897324417
+platform,xbox,305,14,All,6.207773792752143
+platform,xbox,305,14,Weekday,5.7958542574126035
+platform,xbox,305,14,Weekend,7.23757263110099
+platform,xbox,305,15,All,6.930499483602732
+platform,xbox,305,15,Weekday,6.539532641449372
+platform,xbox,305,15,Weekend,7.907916588986128
+platform,xbox,305,16,All,7.67194202522955
+platform,xbox,305,16,Weekday,7.404910783239504
+platform,xbox,305,16,Weekend,8.339520130204667
+platform,xbox,305,17,All,8.001484974148516
+platform,xbox,305,17,Weekday,7.771475509295346
+platform,xbox,305,17,Weekend,8.576508636281442
+platform,xbox,305,18,All,8.472411744516695
+platform,xbox,305,18,Weekday,8.306247182296532
+platform,xbox,305,18,Weekend,8.8878231500671
+platform,xbox,305,19,All,9.44637913519343
+platform,xbox,305,19,Weekday,9.31713643062651
+platform,xbox,305,19,Weekend,9.769485896610734
+platform,xbox,305,20,All,10.17437107155123
+platform,xbox,305,20,Weekday,9.909774523095665
+platform,xbox,305,20,Weekend,10.835862442690146
+platform,xbox,305,21,All,9.908984375450263
+platform,xbox,305,21,Weekday,9.688974284596155
+platform,xbox,305,21,Weekend,10.459009602585537
+platform,xbox,305,22,All,8.834723640677023
+platform,xbox,305,22,Weekday,8.550228062075533
+platform,xbox,305,22,Weekend,9.54596258718075
+platform,xbox,305,23,All,7.053264342101659
+platform,xbox,305,23,Weekday,6.977085857097373
+platform,xbox,305,23,Weekend,7.243710554612375
+platform,nintendo,1190,0,All,0.8890782307722022
+platform,nintendo,1190,0,Weekday,0.827463448538173
+platform,nintendo,1190,0,Weekend,1.0431151863572747
+platform,nintendo,1190,1,All,0.6536848019403383
+platform,nintendo,1190,1,Weekday,0.6330895071232778
+platform,nintendo,1190,1,Weekend,0.7051730389829889
+platform,nintendo,1190,2,All,0.41080627946847215
+platform,nintendo,1190,2,Weekday,0.3697211171809912
+platform,nintendo,1190,2,Weekend,0.5135191851871745
+platform,nintendo,1190,3,All,0.2615278193938026
+platform,nintendo,1190,3,Weekday,0.22615211919698558
+platform,nintendo,1190,3,Weekend,0.3499670698858451
+platform,nintendo,1190,4,All,0.17413752343514677
+platform,nintendo,1190,4,Weekday,0.14864702476143996
+platform,nintendo,1190,4,Weekend,0.23786377011941376
+platform,nintendo,1190,5,All,0.2126692861065548
+platform,nintendo,1190,5,Weekday,0.18462026050536565
+platform,nintendo,1190,5,Weekend,0.28279185010952773
+platform,nintendo,1190,6,All,0.2222055007744016
+platform,nintendo,1190,6,Weekday,0.20175502018071886
+platform,nintendo,1190,6,Weekend,0.2733317022586084
+platform,nintendo,1190,7,All,0.2909174804232134
+platform,nintendo,1190,7,Weekday,0.2596221309626689
+platform,nintendo,1190,7,Weekend,0.3691558540745748
+platform,nintendo,1190,8,All,0.42989608098538973
+platform,nintendo,1190,8,Weekday,0.37978098880392547
+platform,nintendo,1190,8,Weekend,0.5551838114390503
+platform,nintendo,1190,9,All,0.6242934736395039
+platform,nintendo,1190,9,Weekday,0.5852919270221575
+platform,nintendo,1190,9,Weekend,0.7217973401828702
+platform,nintendo,1190,10,All,0.8559898554576997
+platform,nintendo,1190,10,Weekday,0.7873107515064115
+platform,nintendo,1190,10,Weekend,1.0276876153359202
+platform,nintendo,1190,11,All,0.897899450013582
+platform,nintendo,1190,11,Weekday,0.7176203347492384
+platform,nintendo,1190,11,Weekend,1.3485972381744409
+platform,nintendo,1190,12,All,0.9751814587507202
+platform,nintendo,1190,12,Weekday,0.7965990106800457
+platform,nintendo,1190,12,Weekend,1.4216375789274065
+platform,nintendo,1190,13,All,1.0848812509967372
+platform,nintendo,1190,13,Weekday,0.9113989606765929
+platform,nintendo,1190,13,Weekend,1.5185869767970974
+platform,nintendo,1190,14,All,1.3982185596916201
+platform,nintendo,1190,14,Weekday,1.3046703911806756
+platform,nintendo,1190,14,Weekend,1.6320889809689816
+platform,nintendo,1190,15,All,1.3675899753044563
+platform,nintendo,1190,15,Weekday,1.2562361504725805
+platform,nintendo,1190,15,Weekend,1.645974537384146
+platform,nintendo,1190,16,All,1.5018670994772956
+platform,nintendo,1190,16,Weekday,1.4180897295487276
+platform,nintendo,1190,16,Weekend,1.7113105242987157
+platform,nintendo,1190,17,All,1.5743518333482098
+platform,nintendo,1190,17,Weekday,1.5118966558295253
+platform,nintendo,1190,17,Weekend,1.730489777144921
+platform,nintendo,1190,18,All,1.7441157650528365
+platform,nintendo,1190,18,Weekday,1.6085142591536579
+platform,nintendo,1190,18,Weekend,2.083119529800782
+platform,nintendo,1190,19,All,2.0213485862237706
+platform,nintendo,1190,19,Weekday,1.9442412720084852
+platform,nintendo,1190,19,Weekend,2.214116871761984
+platform,nintendo,1190,20,All,2.138281447888088
+platform,nintendo,1190,20,Weekday,2.130529751448211
+platform,nintendo,1190,20,Weekend,2.157660688987781
+platform,nintendo,1190,21,All,2.006374318812586
+platform,nintendo,1190,21,Weekday,1.8556931819052234
+platform,nintendo,1190,21,Weekend,2.3830771610809927
+platform,nintendo,1190,22,All,1.6678013712641935
+platform,nintendo,1190,22,Weekday,1.4238835507752587
+platform,nintendo,1190,22,Weekend,2.2775959224865296
+platform,nintendo,1190,23,All,1.2450244586803556
+platform,nintendo,1190,23,Weekday,1.1541498198909832
+platform,nintendo,1190,23,Weekend,1.4722110556537866
+gender,Man,2275,0,All,4.39515010419131
+gender,Man,2275,0,Weekday,4.05564984401212
+gender,Man,2275,0,Weekend,5.243900754639286
+gender,Man,2275,1,All,3.183251974305274
+gender,Man,2275,1,Weekday,2.9593926748183503
+gender,Man,2275,1,Weekend,3.742900223022584
+gender,Man,2275,2,All,2.3187972066033713
+gender,Man,2275,2,Weekday,2.2045792916400755
+gender,Man,2275,2,Weekend,2.604341994011612
+gender,Man,2275,3,All,1.6677289024976463
+gender,Man,2275,3,Weekday,1.5985460068404365
+gender,Man,2275,3,Weekend,1.8406861416406703
+gender,Man,2275,4,All,1.2021709394892892
+gender,Man,2275,4,Weekday,1.162042500137111
+gender,Man,2275,4,Weekend,1.3024920378697347
+gender,Man,2275,5,All,1.0062808971827446
+gender,Man,2275,5,Weekday,0.9739608582499816
+gender,Man,2275,5,Weekend,1.0870809945146518
+gender,Man,2275,6,All,1.0366168047845192
+gender,Man,2275,6,Weekday,0.9896900584715085
+gender,Man,2275,6,Weekend,1.1539336705670467
+gender,Man,2275,7,All,1.222537716580747
+gender,Man,2275,7,Weekday,1.1815426801039268
+gender,Man,2275,7,Weekend,1.3250253077727976
+gender,Man,2275,8,All,1.6029197392432588
+gender,Man,2275,8,Weekday,1.496463918628295
+gender,Man,2275,8,Weekend,1.8690592907806687
+gender,Man,2275,9,All,2.1423177551802532
+gender,Man,2275,9,Weekday,1.9782416246889394
+gender,Man,2275,9,Weekend,2.5525080814085377
+gender,Man,2275,10,All,2.715917892511662
+gender,Man,2275,10,Weekday,2.469622890809019
+gender,Man,2275,10,Weekend,3.3316553967682707
+gender,Man,2275,11,All,3.20818018631287
+gender,Man,2275,11,Weekday,2.9249761929757874
+gender,Man,2275,11,Weekend,3.916190169655576
+gender,Man,2275,12,All,3.7621248481292784
+gender,Man,2275,12,Weekday,3.4097893922605307
+gender,Man,2275,12,Weekend,4.642963487801147
+gender,Man,2275,13,All,4.3444137752262275
+gender,Man,2275,13,Weekday,3.9137384038090035
+gender,Man,2275,13,Weekend,5.421102203769285
+gender,Man,2275,14,All,4.968289888150983
+gender,Man,2275,14,Weekday,4.547496587383309
+gender,Man,2275,14,Weekend,6.020273140070169
+gender,Man,2275,15,All,5.402322103290406
+gender,Man,2275,15,Weekday,4.997798762717139
+gender,Man,2275,15,Weekend,6.413630454723575
+gender,Man,2275,16,All,5.789948494830306
+gender,Man,2275,16,Weekday,5.382332848199074
+gender,Man,2275,16,Weekend,6.8089876114083845
+gender,Man,2275,17,All,6.174684780555326
+gender,Man,2275,17,Weekday,5.887328808276905
+gender,Man,2275,17,Weekend,6.893074711251378
+gender,Man,2275,18,All,6.876444219904652
+gender,Man,2275,18,Weekday,6.631639530583818
+gender,Man,2275,18,Weekend,7.488455943206735
+gender,Man,2275,19,All,7.7405281265659385
+gender,Man,2275,19,Weekday,7.609932590761597
+gender,Man,2275,19,Weekend,8.067016966076789
+gender,Man,2275,20,All,8.481746539520275
+gender,Man,2275,20,Weekday,8.362668100173591
+gender,Man,2275,20,Weekend,8.779442637886984
+gender,Man,2275,21,All,8.217045336391848
+gender,Man,2275,21,Weekday,8.09791503186624
+gender,Man,2275,21,Weekend,8.514871097705866
+gender,Man,2275,22,All,7.3070352485475105
+gender,Man,2275,22,Weekday,7.10229650274
+gender,Man,2275,22,Weekend,7.818882113066289
+gender,Man,2275,23,All,5.902607835449813
+gender,Man,2275,23,Weekday,5.701047986839176
+gender,Man,2275,23,Weekend,6.406507456976407
+gender,Woman,1156,0,All,3.1741628065354988
+gender,Woman,1156,0,Weekday,2.9183388376307615
+gender,Woman,1156,0,Weekend,3.813722728797342
+gender,Woman,1156,1,All,2.289348056944228
+gender,Woman,1156,1,Weekday,2.1779020645182348
+gender,Woman,1156,1,Weekend,2.567963038009211
+gender,Woman,1156,2,All,1.6187572555342755
+gender,Woman,1156,2,Weekday,1.4324358788173392
+gender,Woman,1156,2,Weekend,2.084560697326617
+gender,Woman,1156,3,All,1.0697305532553392
+gender,Woman,1156,3,Weekday,0.9177766281353397
+gender,Woman,1156,3,Weekend,1.449615366055338
+gender,Woman,1156,4,All,0.7652271511458055
+gender,Woman,1156,4,Weekday,0.6602807827241056
+gender,Woman,1156,4,Weekend,1.027593072200055
+gender,Woman,1156,5,All,0.6356344312378738
+gender,Woman,1156,5,Weekday,0.5252519090389441
+gender,Woman,1156,5,Weekend,0.9115907367351983
+gender,Woman,1156,6,All,0.5993558036576248
+gender,Woman,1156,6,Weekday,0.5192690552795391
+gender,Woman,1156,6,Weekend,0.7995726746028387
+gender,Woman,1156,7,All,0.7392010168640792
+gender,Woman,1156,7,Weekday,0.6348443708148711
+gender,Woman,1156,7,Weekend,1.000092631987099
+gender,Woman,1156,8,All,1.0432843596632655
+gender,Woman,1156,8,Weekday,0.9293250956850458
+gender,Woman,1156,8,Weekend,1.3281825196088144
+gender,Woman,1156,9,All,1.438286736545631
+gender,Woman,1156,9,Weekday,1.3145397350537429
+gender,Woman,1156,9,Weekend,1.7476542402753523
+gender,Woman,1156,10,All,1.8840315731827013
+gender,Woman,1156,10,Weekday,1.657540774820232
+gender,Woman,1156,10,Weekend,2.4502585690888745
+gender,Woman,1156,11,All,2.262836649149096
+gender,Woman,1156,11,Weekday,1.8903649337493968
+gender,Woman,1156,11,Weekend,3.1940159376483415
+gender,Woman,1156,12,All,2.652406642412738
+gender,Woman,1156,12,Weekday,2.157978081395631
+gender,Woman,1156,12,Weekend,3.8884780449555083
+gender,Woman,1156,13,All,2.9602349571462088
+gender,Woman,1156,13,Weekday,2.579136139812091
+gender,Woman,1156,13,Weekend,3.912982000481504
+gender,Woman,1156,14,All,3.4077344445835656
+gender,Woman,1156,14,Weekday,2.976025427766322
+gender,Woman,1156,14,Weekend,4.487006986626676
+gender,Woman,1156,15,All,3.7268784733204963
+gender,Woman,1156,15,Weekday,3.2695455261149027
+gender,Woman,1156,15,Weekend,4.87021084133448
+gender,Woman,1156,16,All,3.897678374743788
+gender,Woman,1156,16,Weekday,3.570707032531792
+gender,Woman,1156,16,Weekend,4.715106730273776
+gender,Woman,1156,17,All,4.268468210091115
+gender,Woman,1156,17,Weekday,4.014232599523369
+gender,Woman,1156,17,Weekend,4.904057236510477
+gender,Woman,1156,18,All,4.787804271156468
+gender,Woman,1156,18,Weekday,4.506141810533405
+gender,Woman,1156,18,Weekend,5.491960422714127
+gender,Woman,1156,19,All,5.690011928010773
+gender,Woman,1156,19,Weekday,5.46323974279791
+gender,Woman,1156,19,Weekend,6.25694239104293
+gender,Woman,1156,20,All,6.104569578131055
+gender,Woman,1156,20,Weekday,5.898943322923847
+gender,Woman,1156,20,Weekend,6.618635216149075
+gender,Woman,1156,21,All,6.032868986492183
+gender,Woman,1156,21,Weekday,5.73725173286021
+gender,Woman,1156,21,Weekend,6.771912120572113
+gender,Woman,1156,22,All,5.304902339022317
+gender,Woman,1156,22,Weekday,4.98941265238837
+gender,Woman,1156,22,Weekend,6.093626555607186
+gender,Woman,1156,23,All,4.314106728585054
+gender,Woman,1156,23,Weekday,4.1163898853062015
+gender,Woman,1156,23,Weekend,4.808398836782188
+gender,Non-binary,174,0,All,5.090129875445544
+gender,Non-binary,174,0,Weekday,5.3378162111197875
+gender,Non-binary,174,0,Weekend,4.470914036259933
+gender,Non-binary,174,1,All,3.5173882562579397
+gender,Non-binary,174,1,Weekday,3.543877701309571
+gender,Non-binary,174,1,Weekend,3.4511646436288617
+gender,Non-binary,174,2,All,2.3447980113943387
+gender,Non-binary,174,2,Weekday,2.303917479732686
+gender,Non-binary,174,2,Weekend,2.4469993405484707
+gender,Non-binary,174,3,All,1.6249557247659614
+gender,Non-binary,174,3,Weekday,1.6011403159167175
+gender,Non-binary,174,3,Weekend,1.6844942468890716
+gender,Non-binary,174,4,All,1.1845681358286584
+gender,Non-binary,174,4,Weekday,1.1736289802271207
+gender,Non-binary,174,4,Weekend,1.2119160248325016
+gender,Non-binary,174,5,All,0.9225854352264475
+gender,Non-binary,174,5,Weekday,0.9242132736109024
+gender,Non-binary,174,5,Weekend,0.9185158392653104
+gender,Non-binary,174,6,All,0.8868924920735154
+gender,Non-binary,174,6,Weekday,0.882341395727536
+gender,Non-binary,174,6,Weekend,0.8982702329384636
+gender,Non-binary,174,7,All,1.0932208065613518
+gender,Non-binary,174,7,Weekday,1.0575293127040126
+gender,Non-binary,174,7,Weekend,1.1824495412046991
+gender,Non-binary,174,8,All,1.5777067400307667
+gender,Non-binary,174,8,Weekday,1.503586902814113
+gender,Non-binary,174,8,Weekend,1.7630063330724004
+gender,Non-binary,174,9,All,2.0434395587017535
+gender,Non-binary,174,9,Weekday,1.8727479050580174
+gender,Non-binary,174,9,Weekend,2.4701686928110935
+gender,Non-binary,174,10,All,2.8252725853894236
+gender,Non-binary,174,10,Weekday,2.661381812332345
+gender,Non-binary,174,10,Weekend,3.23499951803212
+gender,Non-binary,174,11,All,3.2536350514850625
+gender,Non-binary,174,11,Weekday,3.0725052661872043
+gender,Non-binary,174,11,Weekend,3.706459514729707
+gender,Non-binary,174,12,All,3.6246004370029143
+gender,Non-binary,174,12,Weekday,3.4472847378891855
+gender,Non-binary,174,12,Weekend,4.067889684787235
+gender,Non-binary,174,13,All,4.762966966134102
+gender,Non-binary,174,13,Weekday,4.3059612625320485
+gender,Non-binary,174,13,Weekend,5.905481225139235
+gender,Non-binary,174,14,All,5.012887358688636
+gender,Non-binary,174,14,Weekday,4.68104070959078
+gender,Non-binary,174,14,Weekend,5.842503981433278
+gender,Non-binary,174,15,All,5.504854636570424
+gender,Non-binary,174,15,Weekday,5.194394588099915
+gender,Non-binary,174,15,Weekend,6.281004757746695
+gender,Non-binary,174,16,All,5.837807173230306
+gender,Non-binary,174,16,Weekday,5.519402168759778
+gender,Non-binary,174,16,Weekend,6.633819684406628
+gender,Non-binary,174,17,All,5.963282671177354
+gender,Non-binary,174,17,Weekday,5.4923638639499135
+gender,Non-binary,174,17,Weekend,7.140579689245954
+gender,Non-binary,174,18,All,6.673501632287529
+gender,Non-binary,174,18,Weekday,6.489632113573739
+gender,Non-binary,174,18,Weekend,7.133175429072007
+gender,Non-binary,174,19,All,7.274229921864905
+gender,Non-binary,174,19,Weekday,7.177391233846262
+gender,Non-binary,174,19,Weekend,7.516326641911511
+gender,Non-binary,174,20,All,8.246168468077446
+gender,Non-binary,174,20,Weekday,8.325490611677846
+gender,Non-binary,174,20,Weekend,8.047863109076445
+gender,Non-binary,174,21,All,8.477568141963314
+gender,Non-binary,174,21,Weekday,8.543041234463196
+gender,Non-binary,174,21,Weekend,8.313885410713612
+gender,Non-binary,174,22,All,7.274930536975505
+gender,Non-binary,174,22,Weekday,7.334233321344793
+gender,Non-binary,174,22,Weekend,7.126673576052285
+gender,Non-binary,174,23,All,6.360664017239581
+gender,Non-binary,174,23,Weekday,6.66835075397241
+gender,Non-binary,174,23,Weekend,5.591447175407507
+employment,Working full-time,1693,0,All,2.7594257222281975
+employment,Working full-time,1693,0,Weekday,2.3713538502868445
+employment,Working full-time,1693,0,Weekend,3.7296054020815808
+employment,Working full-time,1693,1,All,1.8010866044412654
+employment,Working full-time,1693,1,Weekday,1.5969003943423983
+employment,Working full-time,1693,1,Weekend,2.311552129688433
+employment,Working full-time,1693,2,All,1.2354903328612727
+employment,Working full-time,1693,2,Weekday,1.0900359794561976
+employment,Working full-time,1693,2,Weekend,1.599126216373961
+employment,Working full-time,1693,3,All,0.8657334873366164
+employment,Working full-time,1693,3,Weekday,0.7724805336757937
+employment,Working full-time,1693,3,Weekend,1.098865871488673
+employment,Working full-time,1693,4,All,0.6744660304543619
+employment,Working full-time,1693,4,Weekday,0.5933164205391942
+employment,Working full-time,1693,4,Weekend,0.877340055242281
+employment,Working full-time,1693,5,All,0.6197523707324576
+employment,Working full-time,1693,5,Weekday,0.5245234660429327
+employment,Working full-time,1693,5,Weekend,0.8578246324562698
+employment,Working full-time,1693,6,All,0.7255016342663078
+employment,Working full-time,1693,6,Weekday,0.6282679802637426
+employment,Working full-time,1693,6,Weekend,0.96858576927272
+employment,Working full-time,1693,7,All,1.0000218581946327
+employment,Working full-time,1693,7,Weekday,0.8944041398235065
+employment,Working full-time,1693,7,Weekend,1.264066154122448
+employment,Working full-time,1693,8,All,1.4217445924920684
+employment,Working full-time,1693,8,Weekday,1.2428118743338339
+employment,Working full-time,1693,8,Weekend,1.869076387887655
+employment,Working full-time,1693,9,All,1.8896529187353954
+employment,Working full-time,1693,9,Weekday,1.6443636762086355
+employment,Working full-time,1693,9,Weekend,2.5028760250522955
+employment,Working full-time,1693,10,All,2.4039120902690168
+employment,Working full-time,1693,10,Weekday,2.0072096790804252
+employment,Working full-time,1693,10,Weekend,3.395668118240497
+employment,Working full-time,1693,11,All,2.6814997112551984
+employment,Working full-time,1693,11,Weekday,2.1923989056553754
+employment,Working full-time,1693,11,Weekend,3.904251725254756
+employment,Working full-time,1693,12,All,3.065454158432314
+employment,Working full-time,1693,12,Weekday,2.463787066444693
+employment,Working full-time,1693,12,Weekend,4.569621888401365
+employment,Working full-time,1693,13,All,3.43181532826442
+employment,Working full-time,1693,13,Weekday,2.7925161088616877
+employment,Working full-time,1693,13,Weekend,5.030063376771253
+employment,Working full-time,1693,14,All,3.909474401610828
+employment,Working full-time,1693,14,Weekday,3.307038665734973
+employment,Working full-time,1693,14,Weekend,5.415563741300467
+employment,Working full-time,1693,15,All,4.084956618585938
+employment,Working full-time,1693,15,Weekday,3.5107451559341234
+employment,Working full-time,1693,15,Weekend,5.520485275215473
+employment,Working full-time,1693,16,All,4.426702226481907
+employment,Working full-time,1693,16,Weekday,3.912380197296999
+employment,Working full-time,1693,16,Weekend,5.712507299444175
+employment,Working full-time,1693,17,All,4.875504926273081
+employment,Working full-time,1693,17,Weekday,4.441896815326158
+employment,Working full-time,1693,17,Weekend,5.9595252036403865
+employment,Working full-time,1693,18,All,5.694657248424852
+employment,Working full-time,1693,18,Weekday,5.225656232169863
+employment,Working full-time,1693,18,Weekend,6.8671597890623275
+employment,Working full-time,1693,19,All,6.736241490359209
+employment,Working full-time,1693,19,Weekday,6.438629103391045
+employment,Working full-time,1693,19,Weekend,7.480272457779617
+employment,Working full-time,1693,20,All,7.4257667286752564
+employment,Working full-time,1693,20,Weekday,7.190877068987589
+employment,Working full-time,1693,20,Weekend,8.012990877894422
+employment,Working full-time,1693,21,All,6.906996853911869
+employment,Working full-time,1693,21,Weekday,6.656952029712722
+employment,Working full-time,1693,21,Weekend,7.532108914409735
+employment,Working full-time,1693,22,All,5.671534583178051
+employment,Working full-time,1693,22,Weekday,5.404917851910272
+employment,Working full-time,1693,22,Weekend,6.338076411347496
+employment,Working full-time,1693,23,All,4.129645434153264
+employment,Working full-time,1693,23,Weekday,3.906028437507428
+employment,Working full-time,1693,23,Weekend,4.6886879257678515
+employment,Not currently employed,600,0,All,6.4367983990077935
+employment,Not currently employed,600,0,Weekday,6.134990455817634
+employment,Not currently employed,600,0,Weekend,7.191318256983192
+employment,Not currently employed,600,1,All,5.183667698578758
+employment,Not currently employed,600,1,Weekday,4.957266081934855
+employment,Not currently employed,600,1,Weekend,5.749671740188514
+employment,Not currently employed,600,2,All,3.7958393608021455
+employment,Not currently employed,600,2,Weekday,3.681852985522198
+employment,Not currently employed,600,2,Weekend,4.080805299002012
+employment,Not currently employed,600,3,All,2.66828604551616
+employment,Not currently employed,600,3,Weekday,2.5571358840943663
+employment,Not currently employed,600,3,Weekend,2.9461614490706434
+employment,Not currently employed,600,4,All,1.9748639108229884
+employment,Not currently employed,600,4,Weekday,1.899945077954689
+employment,Not currently employed,600,4,Weekend,2.1621609929937367
+employment,Not currently employed,600,5,All,1.5828859791860346
+employment,Not currently employed,600,5,Weekday,1.5000776523380146
+employment,Not currently employed,600,5,Weekend,1.789906796306085
+employment,Not currently employed,600,6,All,1.4304008694739712
+employment,Not currently employed,600,6,Weekday,1.3603535894204042
+employment,Not currently employed,600,6,Weekend,1.605519069607889
+employment,Not currently employed,600,7,All,1.4625111455712354
+employment,Not currently employed,600,7,Weekday,1.4155658366932096
+employment,Not currently employed,600,7,Weekend,1.5798744177662996
+employment,Not currently employed,600,8,All,1.7574417538379703
+employment,Not currently employed,600,8,Weekday,1.7091319302419052
+employment,Not currently employed,600,8,Weekend,1.8782163128281342
+employment,Not currently employed,600,9,All,2.2911720639103437
+employment,Not currently employed,600,9,Weekday,2.2233031129921352
+employment,Not currently employed,600,9,Weekend,2.4608444412058654
+employment,Not currently employed,600,10,All,3.0017261070219234
+employment,Not currently employed,600,10,Weekday,2.9067430347621372
+employment,Not currently employed,600,10,Weekend,3.239183787671389
+employment,Not currently employed,600,11,All,3.7028931986175357
+employment,Not currently employed,600,11,Weekday,3.601067160873657
+employment,Not currently employed,600,11,Weekend,3.957458292977232
+employment,Not currently employed,600,12,All,4.341608876358147
+employment,Not currently employed,600,12,Weekday,4.179624589348236
+employment,Not currently employed,600,12,Weekend,4.746569593882925
+employment,Not currently employed,600,13,All,5.112976897882082
+employment,Not currently employed,600,13,Weekday,4.879932116574344
+employment,Not currently employed,600,13,Weekend,5.695588851151426
+employment,Not currently employed,600,14,All,5.817810849140479
+employment,Not currently employed,600,14,Weekday,5.515893247932367
+employment,Not currently employed,600,14,Weekend,6.572604852160759
+employment,Not currently employed,600,15,All,6.526119373740774
+employment,Not currently employed,600,15,Weekday,6.230087130370533
+employment,Not currently employed,600,15,Weekend,7.266199982166378
+employment,Not currently employed,600,16,All,6.896343899672978
+employment,Not currently employed,600,16,Weekday,6.586955924878492
+employment,Not currently employed,600,16,Weekend,7.6698138366591895
+employment,Not currently employed,600,17,All,7.30913935537448
+employment,Not currently employed,600,17,Weekday,7.204775786959267
+employment,Not currently employed,600,17,Weekend,7.570048276412514
+employment,Not currently employed,600,18,All,8.028112252182424
+employment,Not currently employed,600,18,Weekday,7.947081091977156
+employment,Not currently employed,600,18,Weekend,8.23069015269559
+employment,Not currently employed,600,19,All,8.774175181803937
+employment,Not currently employed,600,19,Weekday,8.759327075382743
+employment,Not currently employed,600,19,Weekend,8.811295447856924
+employment,Not currently employed,600,20,All,9.539698167863369
+employment,Not currently employed,600,20,Weekday,9.518132184695924
+employment,Not currently employed,600,20,Weekend,9.593613125781982
+employment,Not currently employed,600,21,All,9.266547930766594
+employment,Not currently employed,600,21,Weekday,9.156215725185021
+employment,Not currently employed,600,21,Weekend,9.542378444720525
+employment,Not currently employed,600,22,All,8.686290046670752
+employment,Not currently employed,600,22,Weekday,8.608722865003642
+employment,Not currently employed,600,22,Weekend,8.880208000838522
+employment,Not currently employed,600,23,All,7.964388861231191
+employment,Not currently employed,600,23,Weekday,7.807091011789571
+employment,Not currently employed,600,23,Weekend,8.357633484835242
+employment,Student,578,0,All,4.977048318985903
+employment,Student,578,0,Weekday,4.75196081115001
+employment,Student,578,0,Weekend,5.539767088575637
+employment,Student,578,1,All,3.536603737312439
+employment,Student,578,1,Weekday,3.373563976894209
+employment,Student,578,1,Weekend,3.944203138358013
+employment,Student,578,2,All,2.559881912035009
+employment,Student,578,2,Weekday,2.394077762948972
+employment,Student,578,2,Weekend,2.9743922847501025
+employment,Student,578,3,All,1.774161937119697
+employment,Student,578,3,Weekday,1.6970875524629643
+employment,Student,578,3,Weekend,1.9668478987615292
+employment,Student,578,4,All,1.155133633545354
+employment,Student,578,4,Weekday,1.1186364678019263
+employment,Student,578,4,Weekend,1.2463765479039233
+employment,Student,578,5,All,0.8522183641646106
+employment,Student,578,5,Weekday,0.856573643090915
+employment,Student,578,5,Weekend,0.8413301668488494
+employment,Student,578,6,All,0.7249630147014741
+employment,Student,578,6,Weekday,0.730672056129235
+employment,Student,578,6,Weekend,0.7106904111320715
+employment,Student,578,7,All,0.7806104540463468
+employment,Student,578,7,Weekday,0.8002539191608599
+employment,Student,578,7,Weekend,0.7315017912600639
+employment,Student,578,8,All,0.9915549941918355
+employment,Student,578,8,Weekday,0.9735972826913813
+employment,Student,578,8,Weekend,1.0364492729429704
+employment,Student,578,9,All,1.4594192688563006
+employment,Student,578,9,Weekday,1.4271203479722272
+employment,Student,578,9,Weekend,1.540166571066484
+employment,Student,578,10,All,2.002006141586401
+employment,Student,578,10,Weekday,1.9536578810577019
+employment,Student,578,10,Weekend,2.122876792908148
+employment,Student,578,11,All,2.4582480329295593
+employment,Student,578,11,Weekday,2.317534358526996
+employment,Student,578,11,Weekend,2.8100322189359686
+employment,Student,578,12,All,3.0328026045055583
+employment,Student,578,12,Weekday,2.819793650522072
+employment,Student,578,12,Weekend,3.5653249894642762
+employment,Student,578,13,All,3.7603218164411203
+employment,Student,578,13,Weekday,3.4331430269965666
+employment,Student,578,13,Weekend,4.578268790052505
+employment,Student,578,14,All,4.62595346768098
+employment,Student,578,14,Weekday,4.258957491216283
+employment,Student,578,14,Weekend,5.543443408842721
+employment,Student,578,15,All,5.2197048570630855
+employment,Student,578,15,Weekday,4.9571222412830185
+employment,Student,578,15,Weekend,5.876161396513251
+employment,Student,578,16,All,5.479546179341055
+employment,Student,578,16,Weekday,5.227450497384605
+employment,Student,578,16,Weekend,6.10978538423218
+employment,Student,578,17,All,5.726054969860535
+employment,Student,578,17,Weekday,5.4866200785053305
+employment,Student,578,17,Weekend,6.324642198248548
+employment,Student,578,18,All,5.9150038947836565
+employment,Student,578,18,Weekday,5.7818853807389985
+employment,Student,578,18,Weekend,6.2478001798953
+employment,Student,578,19,All,6.589661792535109
+employment,Student,578,19,Weekday,6.606738197079519
+employment,Student,578,19,Weekend,6.546970781174083
+employment,Student,578,20,All,7.141081485078074
+employment,Student,578,20,Weekday,7.072442877966895
+employment,Student,578,20,Weekend,7.312678002856024
+employment,Student,578,21,All,7.606212416794764
+employment,Student,578,21,Weekday,7.634452493778585
+employment,Student,578,21,Weekend,7.535612224335213
+employment,Student,578,22,All,7.054315988389096
+employment,Student,578,22,Weekday,6.779103800619026
+employment,Student,578,22,Weekend,7.742346457814269
+employment,Student,578,23,All,6.179939658948459
+employment,Student,578,23,Weekday,5.963053326184422
+employment,Student,578,23,Weekend,6.722155490858552
+care_children,"Yes, I care for children",518,0,All,2.014114773446124
+care_children,"Yes, I care for children",518,0,Weekday,1.850268619321812
+care_children,"Yes, I care for children",518,0,Weekend,2.4237301587569036
+care_children,"Yes, I care for children",518,1,All,1.300379823200668
+care_children,"Yes, I care for children",518,1,Weekday,1.20481092954316
+care_children,"Yes, I care for children",518,1,Weekend,1.539302057344438
+care_children,"Yes, I care for children",518,2,All,0.8902094720137493
+care_children,"Yes, I care for children",518,2,Weekday,0.8556035288896119
+care_children,"Yes, I care for children",518,2,Weekend,0.9767243298240931
+care_children,"Yes, I care for children",518,3,All,0.6426640541416211
+care_children,"Yes, I care for children",518,3,Weekday,0.6188515683093114
+care_children,"Yes, I care for children",518,3,Weekend,0.7021952687223952
+care_children,"Yes, I care for children",518,4,All,0.5341630932793403
+care_children,"Yes, I care for children",518,4,Weekday,0.5218469208261731
+care_children,"Yes, I care for children",518,4,Weekend,0.5649535244122581
+care_children,"Yes, I care for children",518,5,All,0.5700021584195986
+care_children,"Yes, I care for children",518,5,Weekday,0.5579351513646941
+care_children,"Yes, I care for children",518,5,Weekend,0.6001696760568596
+care_children,"Yes, I care for children",518,6,All,0.8272412523199575
+care_children,"Yes, I care for children",518,6,Weekday,0.7673164432969747
+care_children,"Yes, I care for children",518,6,Weekend,0.9770532748774146
+care_children,"Yes, I care for children",518,7,All,1.177136017058025
+care_children,"Yes, I care for children",518,7,Weekday,1.1327701286470304
+care_children,"Yes, I care for children",518,7,Weekend,1.2880507380855113
+care_children,"Yes, I care for children",518,8,All,1.6811614688957937
+care_children,"Yes, I care for children",518,8,Weekday,1.586686021687826
+care_children,"Yes, I care for children",518,8,Weekend,1.917350086915712
+care_children,"Yes, I care for children",518,9,All,2.182350022161323
+care_children,"Yes, I care for children",518,9,Weekday,2.1222279184481887
+care_children,"Yes, I care for children",518,9,Weekend,2.332655281444159
+care_children,"Yes, I care for children",518,10,All,2.527765586540803
+care_children,"Yes, I care for children",518,10,Weekday,2.3785468782436623
+care_children,"Yes, I care for children",518,10,Weekend,2.9008123572836553
+care_children,"Yes, I care for children",518,11,All,2.856776806440507
+care_children,"Yes, I care for children",518,11,Weekday,2.661446603979412
+care_children,"Yes, I care for children",518,11,Weekend,3.345102312593244
+care_children,"Yes, I care for children",518,12,All,3.229138299459805
+care_children,"Yes, I care for children",518,12,Weekday,3.0049013126746775
+care_children,"Yes, I care for children",518,12,Weekend,3.789730766422623
+care_children,"Yes, I care for children",518,13,All,3.5490239452606773
+care_children,"Yes, I care for children",518,13,Weekday,3.2087880934434847
+care_children,"Yes, I care for children",518,13,Weekend,4.39961357480366
+care_children,"Yes, I care for children",518,14,All,3.8874561026821346
+care_children,"Yes, I care for children",518,14,Weekday,3.736675149086614
+care_children,"Yes, I care for children",518,14,Weekend,4.264408486670936
+care_children,"Yes, I care for children",518,15,All,3.8822534041571366
+care_children,"Yes, I care for children",518,15,Weekday,3.733170221065493
+care_children,"Yes, I care for children",518,15,Weekend,4.254961361886247
+care_children,"Yes, I care for children",518,16,All,3.82743585214526
+care_children,"Yes, I care for children",518,16,Weekday,3.572762051375717
+care_children,"Yes, I care for children",518,16,Weekend,4.4641203540691174
+care_children,"Yes, I care for children",518,17,All,3.9621056206897247
+care_children,"Yes, I care for children",518,17,Weekday,3.6851026460362433
+care_children,"Yes, I care for children",518,17,Weekend,4.65461305732343
+care_children,"Yes, I care for children",518,18,All,4.266558335391752
+care_children,"Yes, I care for children",518,18,Weekday,3.9674683879641135
+care_children,"Yes, I care for children",518,18,Weekend,5.014283203960847
+care_children,"Yes, I care for children",518,19,All,5.239447885215298
+care_children,"Yes, I care for children",518,19,Weekday,5.008761607620501
+care_children,"Yes, I care for children",518,19,Weekend,5.81616357920229
+care_children,"Yes, I care for children",518,20,All,6.070776873468664
+care_children,"Yes, I care for children",518,20,Weekday,5.916671929897056
+care_children,"Yes, I care for children",518,20,Weekend,6.456039232397684
+care_children,"Yes, I care for children",518,21,All,5.886892936282471
+care_children,"Yes, I care for children",518,21,Weekday,5.634506071704458
+care_children,"Yes, I care for children",518,21,Weekend,6.517860097727502
+care_children,"Yes, I care for children",518,22,All,4.749111387542998
+care_children,"Yes, I care for children",518,22,Weekday,4.295748254613944
+care_children,"Yes, I care for children",518,22,Weekend,5.88251921986563
+care_children,"Yes, I care for children",518,23,All,3.3214484849736032
+care_children,"Yes, I care for children",518,23,Weekday,3.1199165039224375
+care_children,"Yes, I care for children",518,23,Weekend,3.825278437601517
+care_children,No children,3112,0,All,4.383674019701131
+care_children,No children,3112,0,Weekday,4.07883157225215
+care_children,No children,3112,0,Weekend,5.145780138323583
+care_children,No children,3112,1,All,3.1911374924971896
+care_children,No children,3112,1,Weekday,3.000361110795809
+care_children,No children,3112,1,Weekend,3.66807844675064
+care_children,No children,3112,2,All,2.3052296951056155
+care_children,No children,3112,2,Weekday,2.154499524139129
+care_children,No children,3112,2,Weekend,2.6820551225218305
+care_children,No children,3112,3,All,1.6240355542808425
+care_children,No children,3112,3,Weekday,1.5193078904467134
+care_children,No children,3112,3,Weekend,1.885854713866165
+care_children,No children,3112,4,All,1.1599780123839454
+care_children,No children,3112,4,Weekday,1.0928460503504644
+care_children,No children,3112,4,Weekend,1.3278079174676478
+care_children,No children,3112,5,All,0.9460360052804695
+care_children,No children,3112,5,Weekday,0.88399120348584
+care_children,No children,3112,5,Weekend,1.101148009767043
+care_children,No children,3112,6,All,0.9102735780763676
+care_children,No children,3112,6,Weekday,0.8558240671381308
+care_children,No children,3112,6,Weekend,1.0463973554219599
+care_children,No children,3112,7,All,1.050357074113149
+care_children,No children,3112,7,Weekday,0.9868230123263291
+care_children,No children,3112,7,Weekend,1.2091922285801988
+care_children,No children,3112,8,All,1.386013082967957
+care_children,No children,3112,8,Weekday,1.2769772509487076
+care_children,No children,3112,8,Weekend,1.6586026630160813
+care_children,No children,3112,9,All,1.870019181052442
+care_children,No children,3112,9,Weekday,1.702206063679757
+care_children,No children,3112,9,Weekend,2.289551974484155
+care_children,No children,3112,10,All,2.444299883795271
+care_children,No children,3112,10,Weekday,2.193513218592781
+care_children,No children,3112,10,Weekend,3.071266546801497
+care_children,No children,3112,11,All,2.9166886299581005
+care_children,No children,3112,11,Weekday,2.5924942114786274
+care_children,No children,3112,11,Weekend,3.727174676156783
+care_children,No children,3112,12,All,3.430642287340319
+care_children,No children,3112,12,Weekday,3.0153571415111218
+care_children,No children,3112,12,Weekend,4.468855151913312
+care_children,No children,3112,13,All,3.9822083711413923
+care_children,No children,3112,13,Weekday,3.5555059292662374
+care_children,No children,3112,13,Weekend,5.048964475829278
+care_children,No children,3112,14,All,4.565015678097556
+care_children,No children,3112,14,Weekday,4.10035576244438
+care_children,No children,3112,14,Weekend,5.726665467230492
+care_children,No children,3112,15,All,5.036595038066325
+care_children,No children,3112,15,Weekday,4.574433896893665
+care_children,No children,3112,15,Weekend,6.191997890997973
+care_children,No children,3112,16,All,5.4198144488989595
+care_children,No children,3112,16,Weekday,5.021708943110962
+care_children,No children,3112,16,Weekend,6.415078213368951
+care_children,No children,3112,17,All,5.829134349787171
+care_children,No children,3112,17,Weekday,5.542229945121285
+care_children,No children,3112,17,Weekend,6.546395361451886
+care_children,No children,3112,18,All,6.527494012997216
+care_children,No children,3112,18,Weekday,6.28041967854706
+care_children,No children,3112,18,Weekend,7.145179849122606
+care_children,No children,3112,19,All,7.381266524452198
+care_children,No children,3112,19,Weekday,7.233639294134297
+care_children,No children,3112,19,Weekend,7.750334600246953
+care_children,No children,3112,20,All,7.993334908342844
+care_children,No children,3112,20,Weekday,7.860104427865234
+care_children,No children,3112,20,Weekend,8.32641110953687
+care_children,No children,3112,21,All,7.8134112589238836
+care_children,No children,3112,21,Weekday,7.663311243073895
+care_children,No children,3112,21,Weekend,8.188661298548856
+care_children,No children,3112,22,All,6.994021667221334
+care_children,No children,3112,22,Weekday,6.80728428995768
+care_children,No children,3112,22,Weekend,7.4608651103804675
+care_children,No children,3112,23,All,5.77251552037317
+care_children,No children,3112,23,Weekday,5.604158786232768
+care_children,No children,3112,23,Weekend,6.193407355724177
