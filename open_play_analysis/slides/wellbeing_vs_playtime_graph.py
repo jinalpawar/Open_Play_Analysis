@@ -12,11 +12,13 @@ def create_playtime_spikes_wellbeing_graph(path=["per_day_2025.csv", "biweekly_w
     source_wellbeing = ColumnDataSource(biweekly_wellbeing)
 
     p = figure(
-        width=600, height=400, title="Exploring Playtime Spikes and Effect on Wellbeing Index", x_axis_type="datetime",
+        width=950, height=650, title="Exploring Playtime Spikes and Effect on Wellbeing Index", x_axis_type="datetime",
         x_axis_label="Telemetry Timespan",
         y_axis_label="Total playtime per day (in hours)",
         tooltips=[("Total Playtime", "@duration"), ("Average Wellbeing Index", "@wellbeing_index")]
     )
+    p.border_fill_color = "#FAF8F2"
+    p.background_fill_color = "#FAF8F2"
 
     p.extra_y_ranges = {"wellbeing_index_scale": Range1d(start=1, end=10)}
     p.add_layout(LinearAxis(y_range_name="wellbeing_index_scale"), 'right')
@@ -24,16 +26,17 @@ def create_playtime_spikes_wellbeing_graph(path=["per_day_2025.csv", "biweekly_w
     p.line(
         "date",
         "duration",  # Position columns (required)
-        color="green",  # Color column (can be scalar or column name)
-        alpha=0.1,  # Transparency (0=transparent, 1=opaque)
+        color="#0D2152",  # Color column (can be scalar or column name)
+        alpha=0.3,  # Transparency (0=transparent, 1=opaque)
         source=source_per_day,  # Data source (ColumnDataSource)
     )
 
     p.line(
         "date",
         "duration_smooth",  # Position columns (required)
-        color="green",  # Color column (can be scalar or column name)
+        color="#0D2152",  # Color column (can be scalar or column name)
         alpha=0.8,
+        line_width=1.5,
         source=source_per_day,  # Data source (ColumnDataSource)
         legend_label="Total Duration"
     )
@@ -41,9 +44,10 @@ def create_playtime_spikes_wellbeing_graph(path=["per_day_2025.csv", "biweekly_w
     p.line(
         "date",
         "wellbeing_index_smooth",  # Position columns (required)
-        color="red",  # Color column (can be scalar or column name)
+        color="#9DCEE4",  # Color column (can be scalar or column name)
         alpha=0.8,  # Transparency (0=transparent, 1=opaque)
         source=source_wellbeing,  # Data source (ColumnDataSource)
+        line_width=1.5,
         legend_label="Wellbeing Index",
         y_range_name="wellbeing_index_scale"
         )
@@ -51,15 +55,15 @@ def create_playtime_spikes_wellbeing_graph(path=["per_day_2025.csv", "biweekly_w
     p.line(
         "date",
         "wellbeing_index",  # Position columns (required)
-        color="red",  # Color column (can be scalar or column name)
+        color="#9DCEE4",  # Color column (can be scalar or column name)
         source=source_wellbeing,  # Data source (ColumnDataSource)
-        alpha=0.1,
+        alpha=0.3,
         y_range_name="wellbeing_index_scale"
 
         )
 
-    p.vspan(x=date(2025, 5, 30), color="blue", legend_label="Observed Spikes")
-    p.vspan(x=date(2025, 2, 27), color="blue")
+    p.vspan(x=date(2025, 5, 30), color="#6E40CF", legend_label="Observed Spikes", line_width=1.5)
+    p.vspan(x=date(2025, 2, 27), color="#6E40CF", line_width=1.5)
 
     p.legend.location = "top_left"
 

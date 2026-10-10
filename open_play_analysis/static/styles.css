@@ -1,11 +1,15 @@
-/* CSS */
-.button-56 {
+@font-face {
+  font-family: PressToStart;
+  src: url("/open_play_analysis/static/PressStart2P-Regular.ttf");
+}
+
+.bk-btn {
   align-items: center;
-  background-color: #fee6e3;
-  border: 2px solid #111;
+  background-color: #f8f4c7;
+  border: 2px solid #0D2152;
   border-radius: 8px;
   box-sizing: border-box;
-  color: #111;
+  color: #0D2152;
   cursor: pointer;
   display: flex;
   font-family: Inter,sans-serif;
@@ -23,8 +27,8 @@
   touch-action: manipulation;
 }
 
-.button-56:after {
-  background-color: #111;
+.bk-btn:after {
+  background-color: #0D2152;
   border-radius: 8px;
   content: "";
   display: block;
@@ -38,21 +42,21 @@
   z-index: -1;
 }
 
-.button-56:hover:after {
+.bk-btn:hover:after {
   transform: translate(0, 0);
 }
 
-.button-56:active {
-  background-color: #ffdeda;
+.bk-btn:active {
+  background-color: #f8f4c7;
   outline: 0;
 }
 
-.button-56:hover {
+.bk-btn:hover {
   outline: 0;
 }
 
-@media (min-width: 768px) {
-  .button-56 {
+@media (min-width: 100px) {
+  .bk-btn {
     padding: 0 40px;
   }
 }

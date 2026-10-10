@@ -9,7 +9,7 @@ def as_hours(minutes):
 def create_low_wellbeing_control_grid(path="results_islamia.csv"):
 
     results = pd.read_csv(path)
-    BLUE, EMPTY, INK, MUTED = "#2a78d6", "#e4e3df", "#0b0b0b", "#52514e"
+    BLUE, EMPTY, INK, MUTED = "#0D2152", "#e4e3df", "#0b0b0b", "#52514e"
 
     top = {"x": [], "y": [], "color": [], "group": [], "pct": [], "low": [], "players": []}
     bottom = {"x": [], "y": [], "color": [], "group": [], "time": [], "n": []}
@@ -32,7 +32,7 @@ def create_low_wellbeing_control_grid(path="results_islamia.csv"):
     
     p = figure(width=950, height=650, x_range=(-0.5, 52), y_range=(-17, 12), match_aspect=True,
             toolbar_location=None,
-            title="The more players lose control, the more often they have low wellbeing, and the longer they play")
+            title="Wellbeing Index, Loss of Control and Playtime - how are they related?")
     top_glyph = p.rect("x", "y", width=0.85, height=0.85, color="color", source=ColumnDataSource(top))
     bottom_glyph = p.rect("x", "y", width=0.65, height=0.65, color="color", source=ColumnDataSource(bottom))
     p.add_tools(HoverTool(renderers=[top_glyph], tooltips=[

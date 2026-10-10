@@ -54,10 +54,8 @@ def hourly_unit(path='hourly_play_processed.csv'):
         y_range.end = y_max[m];
         """))
 
-    title = Div(text='<h2>When do people play?</h2>'
-                     '<p>Average minutes of play per player, by local hour. '
-                     'Weekday / Weekend: an average weekday or weekend day.</p>')
+    
     grid = gridplot(plots, ncols=2, width=600, height=400)
-    return column(title, buttons, grid)
+    return column(buttons, grid)
 if __name__.startswith('bokeh'):
     curdoc().add_root(hourly_unit())
