@@ -3,14 +3,8 @@ from bokeh.plotting import figure, curdoc
 from bokeh.models import (
     Div,  # HTML div element for custom HTML/CSS content
     Button,  # Interactive button widget - triggers Python callbacks on click
-    Slider,  # Numeric slider widget - triggers callbacks on value change
     Select,  # Dropdown selection widget - triggers callbacks on selection
-    ColumnDataSource,  # CRITICAL: Bokeh's fundamental data structure
-    HoverTool,  # Interactive hover tooltips - shows data on mouse hover
-    LinearColorMapper,  # Maps numeric values to colors linearly
-    ColorBar,  # Visual legend for color mappers
-    BasicTicker,  # Controls tick mark locations on axes
-    PrintfTickFormatter,  # Formats tick labels using printf-style strings
+    InlineStyleSheet
 )
 
 from bokeh.layouts import (
@@ -20,28 +14,15 @@ from bokeh.layouts import (
     # Example: layout([[plot1, plot2], [plot3]]) creates 2 rows
 )
 
-from bokeh.palettes import (
-    RdYlBu11,  # Red-Yellow-Blue diverging palette with 11 colors
-    # Good for showing positive/negative values
-    Category20,  # Categorical palette with up to 20 distinct colors
-    # Dictionary with keys for different numbers of colors (3,4,5...20)
-    Colorblind
-)
-
-from bokeh.transform import (
-    factor_cmap,  # Maps categorical factors to colors
-    # More efficient than manually assigning colors
-)
+from bokeh.themes.theme import Theme
 
 import numpy as np
 import pandas as pd
-import base64  # For encoding images as base64 strings to embed in HTML
 from datetime import date, datetime, timedelta
-
-from demographics import demographics
-from wellbeing_vs_playtime import wellbeing_vs_playtime, playtime_spike
+from hourly_unit import hourly_unit
+from wellbeing_vs_playtime_graph import create_playtime_spikes_wellbeing_graph
 from keywords_vs_gender import keywords_vs_gender
-
+from low_wellbeing_control import create_low_wellbeing_control_grid
 
 class InteractivePresentation:
     """
@@ -49,108 +30,189 @@ class InteractivePresentation:
     """
 
     def __init__(self):
-        self.datasets = {
-            "meta" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/game_metadata.csv"),
-            "intake" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/survey_intake.csv"),
-            "daily" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/survey_daily.csv"),
-            "biweekly" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/survey_biweekly.csv"),
-            "xbox" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/xbox.csv"),
-            "steam" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/steam.csv"),
-            "nintendo" : pd.read_csv("digital-wellbeing-open-play-eb0a68c/data/clean/nintendo.csv")
-        }
         self.current_slide = 0  # Track which slide is currently displayed
-        self.total_slides = 5  # Total number of slides in presentation
+        self.total_slides = 6  # Total number of slides in presentation
         self.slides = []  # Will hold Bokeh layout objects for each slide
         self.auto_play = False  # Flag for auto-advance mode
         self.auto_play_callback = (None)
         self.create_slides()
         self.create_navigation()
         self.create_layout()
+        self.colors = {
+            "yellow": "#f8f4c7",
+            "black" : "#343838",
+            "pink"  : "#ee3377", 
+            "navy"  : "#0072b2",
+            "teal"  : "#33bbee",
+            "green" : "#009e73"
+
+        }
 
     def create_navigation(self):
         """
         Create navigation controls
         """
-        
+
+        styles = InlineStyleSheet(
+            css=""" .bk-btn {
+            align-items: center;
+            background-color: #f8f4c7;
+            border: 2px solid #111;
+            border-radius: 8px;
+            box-sizing: border-box;
+            color: #111;
+            cursor: pointer;
+            display: flex;
+            font-family: Inter,sans-serif;
+            font-size: 16px;
+            height: 48px;
+            justify-content: center;
+            line-height: 24px;
+            max-width: 100%;
+            padding: 0 25px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            }
+
+            .bk-btn:after {
+            background-color: #111;
+            border-radius: 8px;
+            content: "";
+            display: block;
+            height: 48px;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            top: -2px;
+            transform: translate(8px, 8px);
+            transition: transform .2s ease-out;
+            z-index: -1;
+            }
+
+            .bk-btn:hover:after {
+            transform: translate(0, 0);
+            }
+
+            .bk-btn:active {
+            background-color: #f8f4c7;
+            outline: 0;
+            }
+
+            .bk-btn:hover {
+            outline: 0;
+            }
+
+            @media (min-width: 100px) {
+            .bk-btn {
+                padding: 0 40px;
+            }
+            }"""
+        )
+
         self.prev_button = Button(
-            label="◀ Previous", button_type="primary", width=100
+            label="◀ Previous", stylesheets=[styles]
         )
         self.next_button = Button(
-            label="Next ▶", button_type="primary", width=100
+            label="Next ▶", stylesheets=[styles]
         )
         self.home_button = Button(
-            label="🏠 Home", button_type="warning", width=100
-        )
-
-
-        slide_options = [
-            (str(i), f"Slide {i + 1}: {self.get_slide_title(i)}")
-            for i in range(self.total_slides)
-        ]
-        self.slide_select = Select(
-            title="Jump to:",  # Label above dropdown
-            value="0",  # Initial selection (must match a value from options)
-            options=slide_options,  # List of (value, label) tuples
-            width=300,
-        )
-
-        self.progress_div = Div(
-            text=self.get_progress_html(),  # HTML string
-            width=200,  # Width in pixels
+            label="🏠 Home", stylesheets=[styles]
         )
 
         self.prev_button.on_click(self.prev_slide)
         self.next_button.on_click(self.next_slide)
         self.home_button.on_click(self.go_home)
-        self.slide_select.on_change("value", self.jump_to_slide)
 
     def get_slide_title(self, index):
         """Get title for each slide"""
         titles = [
             "The Dataset",
             "Who plays when?",
-            # "Patterns in Gender-wise Game Preference",
-            "Does gaming make us unhappy?"
             "When play time spikes (why?), does it affect the wellbeing?",
+            "Does gaming make us unhappy?",
+            "Patterns in Gender-wise Game Preference",
             "Conclusion"
         ]
         return titles[index] if index < len(titles) else f"Slide {index + 1}"
-
-    def get_progress_html(self):
-        """Generate progress bar HTML"""
-        progress_pct = ((self.current_slide + 1) / self.total_slides) * 100
-        return f"""
-        <div style="text-align: center;">
-            <b>Slide {self.current_slide + 1} of {self.total_slides}</b><br>
-            <div style="width: 100%; background-color: #f0f0f0; border-radius: 5px;">
-                <div style="width: {progress_pct}%; background-color: #4CAF50; 
-                           height: 20px; border-radius: 5px;"></div>
-            </div>
-        </div>
-        """
 
     def create_slides(self):
         """Create all presentation slides"""
         self.slides = [
             self.create_slide_1(),
             self.create_slide_2(),
-            # self.create_slide_3(),
+            self.create_slide_3(),
             self.create_slide_4(),
-            # self.create_slide_5(),
+            self.create_slide_5(),
             self.create_slide_6()
         ]
 
     def create_slide_1(self):
-        """Slide 1: Welcome and Introduction"""
+        """Welcome and Introduction"""
 
         title = Div(
             text="""
         <h1 style="text-align: center; color: #2c3e50;">
-            Open Play Dataset (v1.2.6)
+            🎮 Open Play Dataset (v1.2.6)
         </h1>
         """,
             width=800,  # Fixed width in pixels
             height=80,  # Fixed height in pixels
+        )
+
+        dashboard = Div(
+        text="""
+        <div style="
+            background: #f8f4c7;
+            border: 2.5px solid #343838;
+            border-radius: 20px;
+            padding: 30px 32px 20px 32px;
+            margin: 18px 0;
+            min-width: 520px;
+            max-width: 720px;
+            box-shadow: 0 8px 32px #8b5cf655, 0 2px 24px #000c;
+            font-family: 'Fira Code', 'Menlo', 'Consolas', monospace;
+        ">
+            <h2 style="
+                color: #f59e0b; 
+                font-size: 2em; font-weight: bold; 
+                margin-top: 0; margin-bottom: 10px; 
+                letter-spacing: 1px; 
+                text-shadow: 0 2px 20px #f59e0b55;
+                @font-face {
+                    font-family: "Press Start 2P";
+                    src: url("PressStart2P-Regular.ttf") format("ttf"),
+                }
+            ">
+                🎮 Open Play Dataset (v1.2.6)
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px;">
+                <div>
+                    <h4 style="color: #06b6d4; font-size: 1.14em; margin-bottom: 10px;">📋 Project Details</h4>
+                    <ul style="color: #f9fafb; font-size: 1.07em; padding-left: 17px; margin-top: 0;">
+                        <li><strong>Languages:</strong> Python, JS, Rust</li>
+                        <li><strong>Framework:</strong> React</li>
+                        <li><strong>Name:</strong> NebulaOps</li>
+                        <li><strong>Description:</strong> A modern dashboard demo for Bokeh.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #f59e0b; font-size: 1.14em; margin-bottom: 10px;">⚙️ Configuration</h4>
+                    <ul style="color: #f9fafb; font-size: 1.07em; padding-left: 17px; margin-top: 0;">
+                        <li><strong>Environment:</strong> 🚀 Production</li>
+                        <li><strong>Features:</strong> 🐛 Debug, 📊 Analytics</li>
+                        <li><strong>Performance:</strong> 8/10</li>
+                        <li><strong>Budget:</strong> $25K - $70K</li>
+                    </ul>
+                </div>
+            </div>
+            
+        """,
+        width=650, height=410
         )
 
         # Info panels
@@ -175,13 +237,13 @@ class InteractivePresentation:
             [
                 [title],  # Row 1: Title
                 [
-                    column(features)
+                    column(dashboard)
                 ],  # Row 2: Two columns
             ]
         )
 
     def create_slide_2(self):
-        """Slide 2:Demographic Exploration"""
+        """Demographic Exploration"""
 
         title = Div(
             text="""
@@ -197,81 +259,13 @@ class InteractivePresentation:
                     [
                         [title],  # Row 1: Title
                         [
-                            column(demographics(**self.datasets))
+                            hourly_unit()
                         ],  # Row 2: Two columns
                     ]
                 )
 
     def create_slide_3(self):
-        """Slide 3: Gender-wise Preferences"""
-
-        title = Div(
-            text="""
-        <h1 style="text-align: center; color: #2c3e50;">
-            Are there any patterns in gender-wise preferences of popular game themes?
-        </h1>
-
-        """,
-            width=1200
-        )
-        gender_keyword = keywords_vs_gender(**self.datasets)
-        source = ColumnDataSource(gender_keyword)
-
-        p = figure(width=600, height=400, title="Gender v/s Game Keywords")
-        p.hbar_stack(gender_keyword.columns[1:], 
-                     y=gender_keyword.columns[0], 
-                     height=0.6, 
-                     source=source,
-                     color=Colorblind[len(gender_keyword.columns[1:])])                        
-        p.ygrid.grid_line_color = None
-
-        return layout(
-                    [
-                        [title],  # Row 1: Title
-                        [
-                            column(p)
-                        ],  # Row 2: Two columns
-                    ]
-                )
-
-    def create_slide_4(self):
-        """Slide 4: Wellbeing Index v/s Playtime"""
-
-        title = Div(
-            text="""
-        <h1 style="text-align: center; color: #2c3e50;">
-            Do players play more when they're doing bad?
-        </h1>
-
-        """,
-            width=800,
-        )
-
-        source = ColumnDataSource(wellbeing_vs_playtime(**self.datasets))
-
-        p = figure(
-            width=600, height=400, title="Wellbeing Index v/s Playtime over 2 weeks"
-        )
-
-        p.scatter(
-            "x",
-            "y",  # Position columns (required)
-            # color="colors",  # Color column (can be scalar or column name)
-            # alpha=0.6,  # Transparency (0=transparent, 1=opaque)
-            source=source,  # Data source (ColumnDataSource)
-        )
-
-        return layout(
-                    [
-                        [title],  # Row 1: Title
-                        [
-                            column(p)
-                        ],  # Row 2: Two columns
-                    ]
-                )
-
-    def create_slide_5(self):
-        """Slide 5: Wellbeing Index v/s Playtime Spikes"""
+        """Playtime Spikes & Wellbeing Index"""
 
         title = Div(
             text="""
@@ -282,73 +276,71 @@ class InteractivePresentation:
         """,
             width=800,
         )
-        per_day_2025, per_day_2025_smooth, biweekly_wellbeing, biweekly_wellbeing_smooth = playtime_spike(**self.datasets)
-
-        source_per_day = ColumnDataSource(per_day_2025)
-        source_wellbeing = ColumnDataSource(biweekly_wellbeing)
-
-        source_per_day_sm = ColumnDataSource(per_day_2025_smooth)
-        source_wellbeing_sm = ColumnDataSource(biweekly_wellbeing_smooth)
-
-        p = figure(
-            width=600, height=400, title="Exploring Playtime Spikes and Effect on Wellbeing Index"
-        )
-
-        p.line(
-            "x",
-            "y",  # Position columns (required)
-            color="green",  # Color column (can be scalar or column name)
-            alpha=0.3,  # Transparency (0=transparent, 1=opaque)
-            source=source_per_day,  # Data source (ColumnDataSource)
-        )
-
-        p.line(
-            "x",
-            "y",  # Position columns (required)
-            color="red",  # Color column (can be scalar or column name)
-            alpha=0.3,  # Transparency (0=transparent, 1=opaque)
-            source=source_wellbeing,  # Data source (ColumnDataSource)
-        )
-
-        p.line(
-                "x",
-                "y",  # Position columns (required)
-                color="green",  # Color column (can be scalar or column name)
-                source=source_per_day_sm,  # Data source (ColumnDataSource)
-                legend_label="Avg Per Day"
-            )
-
-        p.line(
-                "x",
-                "y",  # Position columns (required)
-                color="red",  # Color column (can be scalar or column name)
-                source=source_wellbeing_sm,  # Data source (ColumnDataSource)
-                legend_label="Wellbeing Index"
-
-            )
-
-        p.legend.location = 'top_left'
 
         return layout(
                     [
                         [title],  # Row 1: Title
                         [
-                            column(p)
+                            column(create_playtime_spikes_wellbeing_graph())
+                        ],  # Row 2: Two columns
+                    ]
+                )
+        
+    def create_slide_4(self):
+        """How does gaming affect our sense of control?"""
+
+        title = Div(
+            text="""
+        <h1 style="text-align: center; color: #2c3e50;">
+            The relationship between wellbeing index and loss of control of gaming time
+        </h1>
+
+        """,
+            width=800,
+        )
+
+        return layout(
+                    [
+                        [title],  # Row 1: Title
+                        [
+                            column(create_low_wellbeing_control_grid())
+                        ],  
+                    ]
+                )
+
+    def create_slide_5(self):
+        """Gender-wise Preferences"""
+
+        title = Div(
+            text="""
+        <h1 style="text-align: center; color: #2c3e50;">
+            Do people of a gender, game together?
+        </h1>
+
+        """,
+            width=1200
+        )
+
+        return layout(
+                    [
+                        [title],  # Row 1: Title
+                        [
+                            column(keywords_vs_gender())
                         ],  # Row 2: Two columns
                     ]
                 )
 
     def create_slide_6(self):
-        """Slide 6: Conclusion"""
+        """Conclusion"""
 
         title = Div(
             text="""
         <h1 style="text-align: center; color: #2c3e50;">
-            Conclusion
+            Final Takeaways
         </h1>
         """,
             width=1000,  # Fixed width in pixels
-            height=300,  # Fixed height in pixels
+            height=100,  # Fixed height in pixels
         )
 
         # Info panels
@@ -411,8 +403,6 @@ class InteractivePresentation:
             self.prev_button,
             self.home_button,
             self.next_button,
-            self.slide_select,
-            self.progress_div,
         )
 
         # === MAIN CONTENT AREA ===
@@ -436,27 +426,8 @@ class InteractivePresentation:
         Updates all UI elements to reflect new state.
         """
 
-        # === WIDGET STATE MANAGEMENT ===
-        # Disable navigation buttons at boundaries
-        # Setting .disabled property grays out button and prevents clicks
         self.prev_button.disabled = self.current_slide == 0
         self.next_button.disabled = self.current_slide == self.total_slides - 1
-
-        # === UPDATING DIV CONTENT ===
-        # Changing .text property updates HTML content
-        # Bokeh automatically syncs to browser
-        self.progress_div.text = self.get_progress_html()
-
-        # === UPDATING SELECT WIDGET ===
-        # Setting .value changes selection
-        # Must be string matching one of the option values
-        self.slide_select.value = str(self.current_slide)
-
-        # === UPDATING LAYOUT CHILDREN ===
-        # CRITICAL: This is how to swap content in Bokeh!
-        # Layout.children is a list of child elements
-        # Replacing the list changes what's displayed
-        # Bokeh handles all DOM updates automatically
         self.main_content.children = [self.slides[self.current_slide]]
 
         # Server-side logging (appears in terminal, not browser)
@@ -468,6 +439,7 @@ presentation = InteractivePresentation()
 
 curdoc().add_root(presentation.layout)
 curdoc().title = "Open Play Analysis"
+curdoc().theme = Theme("theme.yaml")
 
 # Server Side logging
 print("=" * 50)
