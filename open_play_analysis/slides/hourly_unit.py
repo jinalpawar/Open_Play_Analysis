@@ -1,7 +1,7 @@
 import pandas as pd
 from bokeh.plotting import figure
 from bokeh.layouts import gridplot, column
-from bokeh.models import ColumnDataSource, RadioButtonGroup, CustomJS, Range1d, Div
+from bokeh.models import ColumnDataSource, RadioButtonGroup, CustomJS, Range1d
 from bokeh.io import curdoc
 
 
@@ -40,8 +40,10 @@ def hourly_unit(path='hourly_play_processed.csv'):
         p.legend.location = 'top_left'
         p.legend.click_policy = 'hide'
         p.legend.label_text_font_size = '8pt'
+        p.border_fill_color = "#FAF8F2"
+        p.background_fill_color = "#FAF8F2"
         plots.append(p)
-    # buttons: when one is clicked, copy that mode's column into y 
+    # buttons: when one is clicked, copy that mode's column into y
     buttons = RadioButtonGroup(labels=modes, active=0)
     buttons.js_on_change('active', CustomJS(
         args=dict(sources=sources, y_range=y_range, modes=modes, y_max=y_max),
@@ -54,8 +56,8 @@ def hourly_unit(path='hourly_play_processed.csv'):
         y_range.end = y_max[m];
         """))
 
-    
-    grid = gridplot(plots, ncols=2, width=600, height=400)
+
+    grid = gridplot(plots, ncols=2, width=475, height=400)
     return column(buttons, grid)
 if __name__.startswith('bokeh'):
     curdoc().add_root(hourly_unit())

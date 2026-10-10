@@ -6,13 +6,14 @@ from bokeh.palettes import Spectral3
 def keywords_vs_gender(path="keywords_gender.csv"):
 
     gender_keyword_wo_0_3 = pd.read_csv(path)
-    
+
     keyword_exp = ["male_protagonist", "female_protagonist", "magic"]
     gender = ["Man", "Woman", "Non-binary"]
 
     source = ColumnDataSource(gender_keyword_wo_0_3)
 
     fig = figure(y_range=gender,
+                 width=950,
                 height=500,
                 title="Gender-wise preference of popular game themes",
                 x_range=[0,100],
@@ -29,5 +30,7 @@ def keywords_vs_gender(path="keywords_gender.csv"):
     # Display Stack Graph
     fig.legend.orientation = "horizontal"
     fig.legend.location = "bottom"
+    fig.border_fill_color = "#FAF8F2"
+    fig.background_fill_color = "#FAF8F2"
 
     return fig

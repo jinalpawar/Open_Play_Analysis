@@ -29,17 +29,16 @@ def create_low_wellbeing_control_grid(path="results_islamia.csv"):
             bottom["color"].append(BLUE if hours - h >= 0.5 else EMPTY)     # square coloured if at least half filled
             bottom["group"].append(row["group"]); bottom["time"].append(as_hours(row["minutes_per_day_low"]))
             bottom["n"].append(int(row["low_with_console_data"]))
-    
+
     p = figure(width=950, height=650, x_range=(-0.5, 52), y_range=(-17, 12), match_aspect=True,
-            toolbar_location=None,
-            title="Wellbeing Index, Loss of Control and Playtime - how are they related?")
+            toolbar_location=None)
     top_glyph = p.rect("x", "y", width=0.85, height=0.85, color="color", source=ColumnDataSource(top))
     bottom_glyph = p.rect("x", "y", width=0.65, height=0.65, color="color", source=ColumnDataSource(bottom))
     p.add_tools(HoverTool(renderers=[top_glyph], tooltips=[
         ("Lose control", "@group"), ("Low wellbeing", "@pct% of them (@low of @players players)")]))
     p.add_tools(HoverTool(renderers=[bottom_glyph], tooltips=[
         ("Lose control", "@group"), ("Average gaming time", "@time a day (@n players with low wellbeing)")]))
-    
+
     for k, row in results.iterrows():
         x0 = k * 13
         pct = int(round(row["pct_low_wellbeing"]))
@@ -51,12 +50,14 @@ def create_low_wellbeing_control_grid(path="results_islamia.csv"):
                         text_align="center", text_font_size="13px", text_font_style="bold", text_color=BLUE))
     p.add_layout(Label(x=-0.5, y=10.0, text="Each grid = 100 players who gave the same answer. "
                     "Blue = players with low wellbeing (index below 5 out of 10).",
-                    text_font_size="13px", text_font_style="bold", text_color=INK))
+                    text_font_size="16px", text_font_style="bold", text_color=INK))
     p.add_layout(Label(x=-0.5, y=-7.6, text="Average gaming time per day of the blue players above (1 square = 1 hour)",
-                    text_font_size="11px", text_color=MUTED))
-    
+                    text_font_size="16px", text_color=MUTED))
+
     p.axis.visible = False
     p.grid.visible = False
     p.outline_line_color = None
+    p.border_fill_color = "#FAF8F2"
+    p.background_fill_color = "#FAF8F2"
 
     return (p)
