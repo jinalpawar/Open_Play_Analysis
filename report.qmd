@@ -1,0 +1,63 @@
+---
+title: "Open Play Analysis"
+subtitle: "Gaming habits and mental wellbeing amongst adults aged 18–40 (ENSAI 2026, Data Visualization)"
+author: "PAWAR Jinal, BILOGHE SAFIOU Islamia, WANG Junfei"
+format:
+  typst:
+    papersize: a4
+    margin: {x: 1.5cm, y: 1.2cm}
+    fontsize: 9pt
+    include-in-header:
+      text: |
+        #show: body => if sys.version >= version(0, 12, 0) {
+          set par(spacing: 0.8em)
+          body
+        } else {
+          show par: set block(spacing: 0.8em)
+          body
+        }
+        #show heading: set block(above: 1em, below: 0.5em)
+---
+
+## The dataset and our project
+
+Open Play (v1.2.6) is an open dataset built by researchers from the University of Oxford, Tilburg University and the Karolinska Institute. According to the official description, it links the gaming accounts of about 2,000 adults in the US and the UK (Steam, Xbox, Nintendo Switch and mobile) to psychological measures of mental health, motivation and wellbeing from 12 weeks of surveys, covering about 1.5M hours of play.[^1]
+
+We compared it with other candidates (Spotify data through spotipy, a political-orientation dataset) and chose Open Play because its topic is close to young adults' lives, it is large, and its structure (multi-platform session logs, game metadata, demographics, repeated surveys) lets us study interactions between many variables. Above all, it is best understood through rich, interactive visualization, the focus of this course.
+
+Our submission contains:
+
+- `open_play_analysis/`: the Bokeh server app, with `main.py` and one module per chart in `slides/`.
+- `Open_Play_Analysis.html`: the same presentation as a single HTML file, the format best suited to presenting the visualizations.
+- `EDA/`: each member's notebook with the full data processing.
+- The processed CSV files read by the app, and this report.
+
+## 1. Who plays when? Do playtimes differ based on demographics?
+
+Play is lowest around 5 a.m. and peaks around 8–9 p.m. on every platform and in every group: groups share the same daily rhythm, while the total amount depends on factors such as work and family (interactive charts on slide 2 of the HTML).
+
+To find out when people play, the goal was a 2×24 table (weekday / weekend × local hour) per player. On the code side: (1) `time_adjust`: each player's time zone from the intake survey is converted into a list of integers to align the times. (2) `get_play_distribution_in_one_platform()`: shifts each session to local time and spreads its minutes hour by hour into the player's table. (3) Each table is divided by the player's observed days and summed by platform. (4) `get_distribution_from_geography()`: sums the tables of the three largest categories of each feature. (5) `hourly_unit()`: draws the four Bokeh panels with All / Weekday / Weekend buttons.
+
+As a first exploration, the analysis still has some shortcomings: the code is redundant and slow, US daylight saving time is not taken into account, and we did not go further into finer questions such as game genres or the composition of player groups.
+
+## 2. Spikes, rings and runes: playtime spikes and wellbeing
+
+<!-- Draft from the slide 3 text, please edit -->
+Daily playtime shows two large spikes, at the end of February 2025 and in early June 2025. They coincide with the release of highly anticipated games (R.E.P.O. and Monster Hunter Wilds in late February; Elden Ring Nightreign and Deltarune in early June), so major releases lead to surges in playtime. We built a wellbeing index from 0 to 10 combining the PROMIS depression measure, the Warwick-Edinburgh Mental Wellbeing Scale and the Cantril ladder, where higher values mean higher wellbeing. The first spike comes with a clear rise in the index, the second with an almost negligible one. The underlying values fluctuate strongly, which could indicate that some participants regretted their playtime spikes.
+
+## 3. Loss of control, wellbeing index and playtime
+
+<!-- Draft from the slide 4 text, please edit -->
+We looked at the relationship between the wellbeing index and the feeling of losing control over gaming time. The more players report losing control, the more often they have low wellbeing, and the longer they spend gaming each day. Because loss of control, low wellbeing and long play go together, this part suggests that how people relate to their gaming may matter more than the hours alone.
+
+## 4. Gender-wise game theme preferences
+
+<!-- Draft from the slide 5 text, please edit -->
+Using the game metadata (keywords), we compared the themes played by each gender. No gender shows an overwhelmingly strong preference for a single theme. Players with male (or equivalent) identities play magic-themed games more than other participants; surprisingly, players with female (or equivalent) identities play games with male protagonists more than other participants.
+
+## 5. Neurodivergence, wellbeing and playtime
+
+<!-- Draft from the slide 6 text, please edit -->
+We plotted the wellbeing index against playtime for each neurodivergence category. No category shows a strong pattern: in every group the points are denser in the lower half of the wellbeing scale, with a considerable number also in the upper half. Overall, the presence of gaming as a hobby seems related to the wellbeing index more than any specific neurodivergence category. The long telemetry period and repeated surveys would allow stronger designs in future work, for example difference-in-differences around game releases or stressful life events.
+
+[^1]: Ballou, N., Földes, T. A., Vuorre, M., Hakman, T., Magnusson, K., & Przybylski, A. K. (2025). *Open Play: A longitudinal dataset of multi-platform video game digital trace data and psychological measures* [Preprint]. PsyArXiv. https://doi.org/10.31234/osf.io/nz96c_v1. Data: Open Play v1.2.6, Zenodo, https://doi.org/10.5281/zenodo.17536656
