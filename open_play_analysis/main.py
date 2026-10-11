@@ -1,5 +1,4 @@
 from bokeh.plotting import curdoc
-from bokeh.plotting import output_file
 from bokeh.models import (
     Div,  # HTML div element for custom HTML/CSS content
     Button,
@@ -167,7 +166,7 @@ class InteractivePresentation:
                     <ul style="color: #F4F2ED; font-size: 1.3em; padding-left: 17px; margin-top: 0;">
                         <li>Telemetry data from Nintendo, Steam & Microsoft across 43 months (2022-2025) </li>
                         <li>12-week survey about mental wellbeing and gaming habits</li>
-                        <li>~4,000 participants combined from US & UK</li>
+                        <li>~2,000 participants combined from US & UK</li>
                         <li>1.5M hours of video game play across 10,000+ games</li>
                     </ul>
                 </div>
@@ -675,7 +674,6 @@ presentation = InteractivePresentation()
 
 curdoc().add_root(presentation.layout)
 curdoc().title = "Open Play Analysis"
-output_file(filename="Open_Play_Analysis.html", title="Open_Play_Analysis")
 
 # Server Side logging
 print("=" * 50)
